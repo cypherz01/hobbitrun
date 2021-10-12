@@ -21,6 +21,15 @@ public class Hobbit {
     private String firsName;
     private String lastName;
 
+    public Hobbit() {
+    }
+
+    public Hobbit(Long id, String firsName, String lastName) {
+        this.id = id;
+        this.firsName = firsName;
+        this.lastName = lastName;
+    }
+
     public Long getId() {
         return id;
     }
