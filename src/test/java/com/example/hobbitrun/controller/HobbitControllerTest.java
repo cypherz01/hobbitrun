@@ -30,7 +30,7 @@ class HobbitControllerTest {
     }
 
     @Test
-    void getAllPOST405() throws Exception {
+    void getAllPOST405gitgit() throws Exception {
         // given spring context is ready
         mockMvc
                 // when calling /hobbit endpoint
