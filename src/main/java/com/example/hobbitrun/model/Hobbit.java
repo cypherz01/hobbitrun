@@ -15,10 +15,10 @@ import javax.persistence.Id;
 
 public class Hobbit {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String firsName;
+    private String firstName;
     private String lastName;
 
     public Hobbit() {
@@ -26,7 +26,7 @@ public class Hobbit {
 
     public Hobbit(Long id, String firsName, String lastName) {
         this.id = id;
-        this.firsName = firsName;
+        this.firstName = firsName;
         this.lastName = lastName;
     }
 
@@ -38,12 +38,12 @@ public class Hobbit {
         this.id = id;
     }
 
-    public String getFirsName() {
-        return firsName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirsName(String firsName) {
-        this.firsName = firsName;
+    public void setFirstName(String firsName) {
+        this.firstName = firsName;
     }
 
     public String getLastName() {

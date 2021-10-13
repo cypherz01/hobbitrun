@@ -4,6 +4,8 @@ import com.example.hobbitrun.model.Hobbit;
 import com.example.hobbitrun.service.HobbitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -27,5 +29,10 @@ public class HobbitController {
     @GetMapping("/hobbits")
     List<Hobbit> getAll() {
         return service.getAll();
+    }
+
+    @PostMapping("/hobbits")
+    Hobbit save(@RequestBody Hobbit hobbit) {
+        return service.save(hobbit);
     }
 }
